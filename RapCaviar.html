@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>RapCaviar</title>
+  <meta name="description" content="Spotify clone made using html,css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./rapcaviar.css" />
+  <link rel="icon" type="image/x-icon" href="./assets/logo.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+  <link href="https://unpkg.com/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet" />
+
+  
+
+</head>
+
+<body>
+  <div class="container mx-auto max-w-screen-xl">
+    <div class="sidebar">
+      <div class="top-icons">
+        <div class="logo">
+          <a href="#">
+            <img src="https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_CMYK_White.png" alt="Logo" />
+          </a>
+        </div>
+        <div class="link-flex">
+          <img src="./assets/home.png" alt="Home" />
+          <a href="#">Home</a>
+        </div>
+        <div class="link-flex">
+          <img src="./assets/search.png" alt="Search" />
+          <a href="#">Search</a>
+        </div>
+      </div>
+      <div class="library">
+        <div class="flex-top">
+          <div class="link-flex">
+            <img src="./assets/playlist.png" alt="Library" />
+            <a href="#">Your Library</a>
+          </div>
+          <div class="link-flex">
+            <img src="./assets/plus.png" />
+
+          </div>
+        </div>
+
+
+        <div class="card-container">
+          <div class="card">
+            <h5>Create your first playlist</h5>
+            <h6>It's easy, we'll help you</h6>
+            <button type="button">Create Playlist</button>
+            <!-- Card content for the first card -->
+          </div>
+          <div class="card">
+            <h5>Let's find some podcats to follow</h5>
+            <h6>we'll keep you updated on new episodes</h6>
+            <button type="button">Browse Podcasts</button>
+            <!-- Card content for the second card -->
+          </div>
+        </div>
+
+
+        <div class="flex-top hide">
+          <p>Legal</p>
+          <p>Cookies</p>
+          <p>Privacy</p>
+          <br>
+          <p>Accessibility</p>
+          <br>
+          <p>About Ads</p>
+        </div>
+        <div class="button1 hide">
+         <button type="button">🌐English</button>
+        </div>
+
+        
+
+        
+
+
+    </div>
+      
+  </div>
+  <div class="main-content">
+      <div class="topbar" style="display: flex;">
+        <div class="prev-next-buttons">
+          <button type="button" class="fa fas fa-chevron-left"></button>
+          <button type="button" class="fa fas fa-chevron-right"></button>
+        </div>
+        <!-- Navbar content -->
+        <div class="navbar">
+          <ul class="hide">
+            <li>
+              <a href="#">Premium</a>
+            </li>
+            <li>
+              <a href="#">Support</a>
+            </li>
+            <li>
+              <a href="#">Download</a>
+            </li>
+            <li class="divider">|</li>
+            <li>
+              <a href="#">Sign Up</a>
+            </li>
+          </ul>
+          <button type="button">Log In</button>
+        </div>
+      </div>
+       
+      <div>
+        <div class="playlist" style="overflow: auto;">
+          <div class="playlist-info">
+            <h2>Playlist</h2>
+            <span>
+              <h1 id="playlist-title">RapCaviar</h1>
+            </span>
+            <p id="playlist-description">Music from Lil Tecca, Lil Uzi Vert and Gucci Mane.</p>
+            <div class="playlist-details">
+              <a href="#" class="spotify-link">
+                <img src="./assets/logo.png" alt="Spotify Logo" class="spotify-logo" />Spotify
+              </a>
+              <div class="separator" style="opacity: 1;">.</div>
+              <p class="likes" style="opacity: 1;">15,599,306 likes</p>
+              <div class="separator" style="opacity: 1;">.</div>
+              <p class="song-count" style="opacity: 1;">50 songs,</p>
+              <p class="duration">2hr 45 min</p>
+            </div>
+          </div>
+        </div>
+           
+      </div>
+
+      <div>
+        <div class="w-full p-0 m-0" style="background-color: #121212; height: 200vh;">
+          <div class="w-full p-4" style="
+                    background: linear-gradient(to right, rgb(60, 4, 4), rgb(14, 1, 1));
+                    background-image: linear-gradient(to bottom, rgb(60, 4, 4), rgb(14, 1, 1));
+                    z-index: -1; height: 200vh;
+                  ">
+            <div class="flex justify-center items-center m-4 md:hidden">
+              <button
+                class="bg-green-500 text-white uppercase text-xs rounded-full font-semibold tracking-widest px-8 py-3">
+                Shuffle Play
+              </button>
+            </div>
+            <div class="hidden flex items-center text-white w-1/2 mx-4 my-6 md:flex"
+              style="background-color: rgba(0, 0, 0, 0);">
+              <svg class="bg-green-500 rounded-full w-12 h-12 p-3 text-black" height="28" role="img" width="28"
+                viewBox="0 0 24 24" aria-hidden="true">
+                <polygon points="21.57 12 5.98 3 5.98 21 21.57 12" fill="currentColor"></polygon>
+              </svg>
+              <div class="text-green-500">
+                <svg class="mx-4 my-2 fill-current" role="img" height="32" width="32" viewBox="0 0 32 32"
+                  class="Svg-ulyrgf-0 hJgLcF">
+                  <path
+                    d="M27.319 5.927a7.445 7.445 0 00-10.02-.462s-.545.469-1.299.469c-.775 0-1.299-.469-1.299-.469a7.445 7.445 0 00-10.02 10.993l9.266 10.848a2.7 2.7 0 004.106 0l9.266-10.848a7.447 7.447 0 000-10.531z">
+                  </path>
+                </svg>
+              </div>
+              <div class="text-gray-300">
+                <svg class="fill-current" role="img" height="32" width="32" viewBox="0 0 32 32"
+                  class="Svg-ulyrgf-0 hJgLcF">
+                  <path
+                    d="M5.998 13.999A2 2 0 105.999 18 2 2 0 005.998 14zm10.001 0A2 2 0 1016 18 2 2 0 0016 14zm10.001 0A2 2 0 1026.001 18 2 2 0 0026 14z">
+                  </path>
+                </svg>
+              </div>
+            </div>
+            <div class="my-0 mx-2 h-72 overflow-y-auto md:h-full md:overflow-hidden pr-0 mr-0"
+              style="background-color: rgba(0, 0, 0, 0); padding-bottom: 0px; margin-right: 0; margin-bottom: 0; height: 100vh;">
+              <table class="w-full cursor-default" style="height: 200vh;">
+                <thead>
+                  <tr
+                    class="flex justify-around items-center text-gray-400 border-b border-gray-400 border-opacity-30 uppercase h-8">
+                    <th class="text-md">
+                      #<span class="text-xs ml-2">Title</span>
+                    </th>
+                    <th class="text-xs">Album</th>
+                    <th class="text-xs">Date Added</th>
+                    <th class="">
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path
+                          d="M7.999 3H6.999V7V8H7.999H9.999V7H7.999V3ZM7.5 0C3.358 0 0 3.358 0 7.5C0 11.642 3.358 15 7.5 15C11.642 15 15 11.642 15 7.5C15 3.358 11.642 0 7.5 0ZM7.5 14C3.916 14 1 11.084 1 7.5C1 3.916 3.916 1 7.5 1C11.084 1 14 3.916 14 7.5C14 11.084 11.084 14 7.5 14Z"
+                          fill="currentColor"></path>
+                      </svg>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr
+                    class="flex justify-around items-center text-gray-400 m-2 font-mono hover:bg-gray-200 hover:bg-opacity-10 rounded-md py-2">
+                    <td class="flex justify-center items-center">
+                      <p class="mr-2">1</p>
+                      <img src="images/dead_girl.jpg" alt="dead girl song poster" height="50px" width="50px" />
+                      <div class="ml-3">
+                        <p class="text-white font-semi-bold">Dead Girl!</p>
+                        <a class="text-xs text-gray-400 hover:text-white hover:cursor-pointer"><span>Alan
+                            Walker</span></a>
+                      </div>
+                    </td>
+                    <td class="text-sm">Dead Girl!</td>
+                    <td class="text-sm">5 days ago</td>
+                    <td class="text-sm">3:14</td>
+                  </tr>
+                  <tr
+                    class="flex justify-around items-center text-gray-400 m-2 font-mono hover:bg-gray-200 hover:bg-opacity-10 rounded-md py-2">
+                    <td class="flex justify-center items-center">
+                      <p class="mr-2">2</p>
+                      <img src="images/spectre.jpg" alt="spectre song poster" height="50px" width="50px" />
+                      <div class="ml-3">
+                        <p class="text-white font-semi-bold">The Spectre</p>
+                        <a class="text-xs text-gray-400 hover:text-white hover:cursor-pointer"><span>Alan
+                            Walker</span></a>
+                      </div>
+                    </td>
+                    <td class="text-sm">The Spectre</td>
+                    <td class="text-sm">5 days ago</td>
+                    <td class="text-sm">3:13</td>
+                  </tr>
+                  <tr
+                    class="flex justify-around items-center text-gray-400 m-2 font-mono hover:bg-gray-200 hover:bg-opacity-10 rounded-md py-2">
+                    <td class="flex justify-center items-center">
+                      <p class="mr-2">3</p>
+                      <img src="images/faded.jpg" alt="faded song poster" height="50px" width="50px" />
+                      <div class="ml-3">
+                        <p class="text-white font-semi-bold">Faded</p>
+                        <a class="text-xs text-gray-400 hover:text-white hover:cursor-pointer"><span>Alan
+                            Walker</span></a>
+                      </div>
+                    </td>
+                    <td class="text-sm">Different World</td>
+                    <td class="text-sm">5 days ago</td>
+                    <td class="text-sm">3:32</td>
+                  </tr>
+                  <tr
+                    class="flex justify-around items-center text-gray-400 m-2 font-mono hover:bg-gray-200 hover:bg-opacity-10 rounded-md py-2">
+                    <td class="flex justify-center items-center">
+                      <p class="mr-2">4</p>
+                      <img src="images/play.jpg" alt="play song poster" height="50px" width="50px" />
+                      <div class="ml-3">
+                        <p class="text-white font-semi-bold">Play</p>
+                        <a class="text-xs text-gray-400 hover:text-white hover:cursor-pointer"><span>Alan
+                            Walker</span></a>
+                      </div>
+                    </td>
+                    <td class="text-sm">Play (feat. K-391)</td>
+                    <td class="text-sm">5 days ago</td>
+                    <td class="text-sm">2:47</td>
+                  </tr>
+                  <tr
+                    class="flex justify-around items-center text-gray-400 m-2 font-mono hover:bg-gray-200 hover:bg-opacity-10 rounded-md py-2">
+                    <td class="flex justify-center items-center">
+                      <p class="mr-2">5</p>
+                      <img src="images/sorry.jpg" alt="sorry song poster" height="50px" width="50px" />
+                      <div class="ml-3">
+                        <p class="text-white font-semi-bold">Sorry</p>
+                        <a class="text-xs text-gray-400 hover:text-white hover:cursor-pointer"><span>Alan
+                            Walker</span></a>
+                      </div>
+                    </td>
+                    <td class="text-sm">Sorry (feat. ISÁK)</td>
+                    <td class="text-sm">5 days ago</td>
+                    <td class="text-sm">2:45</td>
+                  </tr>
+                  <tr
+                    class="flex justify-around items-center text-gray-400 m-2 font-mono hover:bg-gray-200 hover:bg-opacity-10 rounded-md py-2">
+                    <td class="flex justify-center items-center">
+                      <p class="mr-2">6</p>
+                      <img src="images/end_of_time.jpg" alt="end of time song poster" height="50px" width="50px" />
+                      <div class="ml-3">
+                        <p class="text-white font-semi-bold">End of Time</p>
+                        <a class="text-xs text-gray-400 hover:text-white hover:cursor-pointer"><span>Alan
+                            Walker</span></a>
+                      </div>
+                    </td>
+                    <td class="text-sm">End of Time</td>
+                    <td class="text-sm">5 days ago</td>
+                    <td class="text-sm">3:07</td>
+                  </tr>
+                  <tr
+                    class="flex justify-around items-center text-gray-400 m-2 font-mono hover:bg-gray-200 hover:bg-opacity-10 rounded-md py-2">
+                    <td class="flex justify-center items-center">
+                      <p class="mr-2">7</p>
+                      <img src="images/fake-a-smile.jpg" alt="fake a smile song poster" height="50px"
+                        width="50px" />
+                      <div class="ml-3">
+                        <p class="text-white font-semi-bold">Fake A Smile</p>
+                        <a class="text-xs text-gray-400 hover:text-white hover:cursor-pointer"><span>Alan
+                            Walker</span></a>
+                      </div>
+                    </td>
+                    <td class="text-sm">Fake A Smile</td>
+                    <td class="text-sm">5 days ago</td>
+                    <td class="text-sm">2:48</td>
+                  </tr>
+                  <tr
+                    class="flex justify-around items-center text-gray-400 m-2 font-mono hover:bg-gray-200 hover:bg-opacity-10 rounded-md py-2">
+                    <td class="flex justify-center items-center">
+                      <p class="mr-2">8</p>
+                      <img src="images/OMW.jpg" alt="on my way song poster" height="50px" width="50px" />
+                      <div class="ml-3">
+                        <p class="text-white font-semi-bold">On My Way</p>
+                        <a class="text-xs text-gray-400 hover:text-white hover:cursor-pointer"><span>Alan
+                            Walker</span></a>
+                      </div>
+                    </td>
+                    <td class="text-sm">On My Way</td>
+                    <td class="text-sm">5 days ago</td>
+                    <td class="text-sm">3:13</td>
+                  </tr>
+                  <tr
+                    class="flex justify-around items-center text-gray-400 m-2 font-mono hover:bg-gray-200 hover:bg-opacity-10 rounded-md py-2">
+                    <td class="flex justify-center items-center">
+                      <p class="mr-2">9</p>
+                      <img src="images/alone_pt_II.jpg" alt="alone part two song poster" height="50px"
+                        width="50px" />
+                      <div class="ml-3">
+                        <p class="text-white font-semi-bold">Alone, Pt.II</p>
+                        <a class="text-xs text-gray-400 hover:text-white hover:cursor-pointer"><span>Alan
+                            Walker</span></a>
+                      </div>
+                    </td>
+                    <td class="text-sm">Alone, Pt.II</td>
+                    <td class="text-sm">5 days ago</td>
+                    <td class="text-sm">2:59</td>
+                  </tr>
+                  <tr
+                    class="flex justify-around items-center text-gray-400 m-2 font-mono hover:bg-gray-200 hover:bg-opacity-10 rounded-md py-2">
+                    <td class="flex justify-center items-center">
+                      <p class="mr-2">10</p>
+                      <img src="images/ignite.jpg" alt="ignite song poster" height="50px" width="50px" />
+                      <div class="ml-3">
+                        <p class="text-white font-semi-bold">Ignite</p>
+                        <a class="text-xs text-gray-400 hover:text-white hover:cursor-pointer"><span>Alan
+                            Walker</span></a>
+                      </div>
+                    </td>
+                    <td class="text-sm">Ignite (feat. K-391)</td>
+                    <td class="text-sm">5 days ago</td>
+                    <td class="text-sm">3:30</td>
+                  </tr>
+
+                </tbody>
+              </table>
+            </div>
+
+
+
+
+
+          </div>
+        </div>
+      </div>
+      
+  <div class="preview">
+    <div class="text hide">
+      <h6>Preview of Spotify</h6>
+      <p>Sign up to get unlimited songs and podcasts with occasional ads. No credit card needed.</p>
+    </div>
+    <div class="button">
+      <button type="button">Sign up free</button>
+    </div>
+  </div>
+
+        
+
+        
+  </div>
+</body>
+
+</html>
